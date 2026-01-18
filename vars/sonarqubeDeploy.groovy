@@ -11,12 +11,12 @@ def call(Map config) {
         }
     }
 
-    stage('Playbook Execution') {
-        sh """
-        ansible-playbook install-sonarqube.yml \
-        -i inventory/${config.ENVIRONMENT}
-        """
-    }
+   stage('Playbook Execution') {
+    sh '''
+    cd sonarqube-ansible
+    ansible-playbook install-sonarqube.yml -i inventory/prod
+    '''
+}
 
     stage('Notification') {
         slackSend(
