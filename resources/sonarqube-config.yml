@@ -1,3 +1,4 @@
+REPO_URL: "https://github.com/purusharma635/sonarqube-ansible-Assignment-6.git"
 SLACK_CHANNEL_NAME: "#ninja-devops-course-"
 ENVIRONMENT: "prod"
 CODE_BASE_PATH: "env/prod"
